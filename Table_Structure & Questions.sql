@@ -1,8 +1,4 @@
--- Create Database
-CREATE DATABASE OnlineBookstore;
-
--- Switch to the database
-\c OnlineBookstore;
+CREATE database  Online_BookStore;
 
 -- Create Tables
 DROP TABLE IF EXISTS Books;
