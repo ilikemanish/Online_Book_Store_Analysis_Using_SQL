@@ -1,9 +1,9 @@
-📚 Online Book Store Analysis — SQL Project
+📚 Online Book Store — SQL Project
 
-"PostgreSQL" (https://img.shields.io/badge/Tool-PostgreSQL-blue)
-"SQL" (https://img.shields.io/badge/Language-SQL-orange)
-"Data Analysis" (https://img.shields.io/badge/Project-Data%20Analysis-green)
-"Business Intelligence" (https://img.shields.io/badge/Domain-Business%20Analytics-purple)
+"PostgreSQL" (https://img.shields.io/badge/Database-PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+"SQL" (https://img.shields.io/badge/Language-SQL-orange?style=for-the-badge)
+"Data Analysis" (https://img.shields.io/badge/Project-Data%20Analysis-green?style=for-the-badge)
+"Business Analytics" (https://img.shields.io/badge/Domain-Business%20Analytics-purple?style=for-the-badge)
 
 ---
 
@@ -11,36 +11,34 @@
 
 This project presents an end-to-end Online Book Store Analysis developed using PostgreSQL and SQL.
 
-The project analyzes book information, customer details, orders, quantities, prices, genres, authors, revenue, and inventory to generate meaningful business insights.
+The project analyzes books, customers, and orders to understand book inventory, customer purchasing behavior, sales performance, genres, authors, and revenue.
 
-The analysis contains 20 practical SQL business questions, divided into Basic SQL Analysis and Advanced SQL Analysis.
-
-The project demonstrates how SQL can be used for data retrieval, filtering, sorting, aggregation, joins, grouping, ranking, customer analysis, revenue analysis, and inventory analysis.
+The project contains 20 practical SQL business questions, divided into 11 Basic SQL Questions and 9 Advanced SQL Questions.
 
 ---
 
 🎯 Business Problem
 
-An online bookstore needs to understand its books, customers, sales, revenue, and inventory to make better business decisions.
+An online bookstore needs to understand its sales, customers, books, revenue, and inventory to make better business decisions.
 
-This project aims to answer key business questions such as:
+This project answers important business questions such as:
 
 - Which books belong to the Fiction genre?
 - Which books were published after 1950?
 - Which customers are from Canada?
 - What orders were placed in November 2023?
-- What is the total stock of books available?
+- What is the total stock available?
 - Which is the most expensive book?
-- Which customers ordered more than one quantity of a book?
+- Which orders contain more than 1 quantity?
 - Which orders have a total amount above $20?
 - What genres are available?
 - Which book has the lowest stock?
-- What is the total revenue generated?
-- How many books were sold for each genre?
+- What is the total revenue?
+- How many books were sold in each genre?
 - What is the average price of Fantasy books?
 - Which customers have placed at least 2 orders?
 - Which book is ordered most frequently?
-- What are the top 3 most expensive Fantasy books?
+- What are the Top 3 most expensive Fantasy books?
 - How many books were sold by each author?
 - Which cities have customers who spent over $30?
 - Which customer spent the most?
@@ -51,85 +49,70 @@ This project aims to answer key business questions such as:
 📁 Dataset Information
 
 Attribute| Details
-Industry| E-Commerce / Online Book Store
-Dataset| Online Book Store
-Database| PostgreSQL
-Analysis Tool| SQL
-Analysis Type| Sales, Customer & Inventory Analysis
-Project Type| End-to-End SQL Data Analysis
+🏢 Industry| E-Commerce / Online Book Store
+📊 Dataset| Online Book Store
+🗄️ Database| PostgreSQL
+💻 Analysis Tool| SQL
+📈 Analysis Type| Sales, Customer & Inventory Analysis
+🚀 Project Type| End-to-End SQL Data Analysis
 
-📂 Dataset Tables
+📂 Database Tables
 
-The project uses three main tables:
-
-Table| Information
+Table| Description
 📚 Books| Book information, price, genre, author & stock
 👥 Customers| Customer identity and location details
 🛒 Orders| Purchase, quantity, date & total amount
 
-The tables are connected using common identifiers such as Book_ID and Customer_ID.
-
 ---
 
-🛠 Tools & Techniques
+🛠 Tools & Technologies
 
-- PostgreSQL
-- SQL
-- pgAdmin
-- SELECT Statements
-- Filtering
-- Sorting
-- Aggregate Functions
-- GROUP BY
-- ORDER BY
-- HAVING
-- JOINs
-- LEFT JOIN
-- DISTINCT
-- LIMIT
-- COALESCE
-- Date Filtering
-- Revenue Analysis
-- Customer Analysis
-- Inventory Analysis
+- 🐘 PostgreSQL
+- 💻 SQL
+- 🖥️ pgAdmin
+- 🔎 Data Filtering
+- 📊 Data Aggregation
+- 🔗 SQL JOINs
+- 📈 Business Analysis
+- 📦 Inventory Analysis
+- 💰 Revenue Analysis
+- 👥 Customer Analysis
 
 ---
 
 📊 Key Business Metrics
 
-The project focuses on the following key business metrics:
-
 KPI| Analysis
-📚 Total Stock| Total available books
-💰 Total Revenue| Revenue generated from all orders
+📚 Total Stock| Total books available
+💰 Total Revenue| Revenue generated from orders
 🛒 Order Quantity| Quantity of books ordered
 💵 Highest Book Price| Most expensive book
 📉 Lowest Stock| Book with the lowest stock
-👥 Customer Orders| Customers with multiple orders
 🏆 Most Ordered Book| Most frequently ordered book
 📊 Genre Sales| Books sold by genre
 ✍️ Author Sales| Books sold by author
-📦 Remaining Stock| Stock remaining after orders
+👥 Customer Orders| Customers with multiple orders
+📦 Remaining Stock| Stock after fulfilling orders
 
 ---
 
 📚 Basic SQL Analysis
 
-1️⃣ Fiction Books
+1️⃣ Retrieve Fiction Books
 
-Retrieve all books belonging to the Fiction genre.
+Find all books belonging to the Fiction genre.
 
 2️⃣ Books Published After 1950
 
-Find all books published after the year 1950.
+Find books published after the year 1950.
 
 3️⃣ Customers from Canada
 
 List all customers whose country is Canada.
 
-4️⃣ November 2023 Orders
+4️⃣ Orders in November 2023
 
-Show all orders placed during November 2023.
+Retrieve orders placed during November 2023.
 
 5️⃣ Total Book Stock
 
@@ -137,15 +120,15 @@ Calculate the total stock of books available.
 
 6️⃣ Most Expensive Book
 
-Find the details of the book with the highest price.
+Find the details of the most expensive book.
 
 7️⃣ Multiple-Quantity Orders
 
-Show customers/orders where more than 1 quantity of a book was ordered.
+Find orders where the ordered quantity is greater than 1.
 
 8️⃣ Orders Above $20
 
-Retrieve all orders where the total amount exceeds $20.
+Retrieve orders where the total amount exceeds $20.
 
 9️⃣ Available Genres
 
@@ -159,144 +142,117 @@ Find the book with the lowest stock.
 
 Calculate the total revenue generated from all orders.
 
-These basic queries focus on core retrieval, filtering, sorting, and aggregation tasks.
-
 ---
 
 📈 Advanced SQL Analysis
 
 📚 Books Sold by Genre
 
-Retrieve the total number of books sold for each genre.
-
-This helps analyze genre-level sales performance.
-
----
+Calculate the total number of books sold for each genre.
 
 💰 Average Fantasy Book Price
 
 Calculate the average price of books belonging to the Fantasy genre.
 
----
+👥 Customers with At Least 2 Orders
 
-👥 Customers with Multiple Orders
-
-Identify customers who have placed at least 2 orders.
-
----
+Identify customers who have placed at least two orders.
 
 🏆 Most Frequently Ordered Book
 
-Find the book that has been ordered most frequently.
-
----
+Find the book that is ordered most frequently.
 
 💵 Top 3 Most Expensive Fantasy Books
 
-Retrieve the top 3 most expensive books from the Fantasy genre.
-
----
+Retrieve the Top 3 most expensive books from the Fantasy genre.
 
 ✍️ Books Sold by Author
 
 Calculate the total quantity of books sold by each author.
 
----
-
 🌎 Cities with Spending Above $30
 
-List the cities where customers have spent more than $30.
-
----
+List cities where customers have spent more than $30.
 
 🏆 Highest-Spending Customer
 
 Find the customer who spent the most on orders.
 
----
-
 📦 Remaining Stock After Orders
 
 Calculate the stock remaining after fulfilling all orders.
 
-The calculation uses:
-
-Remaining Quantity = Stock − Ordered Quantity
-
-The query also uses "COALESCE()" to handle books without associated orders.
+Remaining Stock = Available Stock − Ordered Quantity
 
 ---
 
 🔍 SQL Analysis Performed
 
-Basic Analysis
+🟢 Basic Analysis
 
-- Retrieve Fiction books.
-- Find books published after 1950.
-- Find customers from Canada.
-- Retrieve November 2023 orders.
-- Calculate total stock.
-- Find the most expensive book.
-- Find orders with quantity greater than 1.
-- Find orders above $20.
-- List available genres.
-- Find the book with the lowest stock.
-- Calculate total revenue.
+- Retrieve Fiction books
+- Find books published after 1950
+- Find customers from Canada
+- Retrieve November 2023 orders
+- Calculate total stock
+- Find the most expensive book
+- Find orders with quantity greater than 1
+- Find orders above $20
+- List available genres
+- Find the lowest-stock book
+- Calculate total revenue
 
-Advanced Analysis
+🔵 Advanced Analysis
 
-- Calculate books sold by genre.
-- Calculate average Fantasy book price.
-- Find customers with at least 2 orders.
-- Find the most frequently ordered book.
-- Find the top 3 expensive Fantasy books.
-- Calculate books sold by author.
-- Find cities with spending above $30.
-- Find the highest-spending customer.
-- Calculate remaining stock after orders.
+- Calculate books sold by genre
+- Calculate average Fantasy book price
+- Find customers with at least 2 orders
+- Find the most frequently ordered book
+- Find Top 3 expensive Fantasy books
+- Calculate books sold by author
+- Find cities with spending above $30
+- Find the highest-spending customer
+- Calculate remaining stock after orders
 
 ---
 
 🧠 SQL Concepts Used
 
-- "SELECT"
-- "WHERE"
-- "DISTINCT"
-- "COUNT()"
-- "SUM()"
-- "AVG()"
-- "GROUP BY"
-- "ORDER BY"
-- "HAVING"
-- "JOIN"
-- "LEFT JOIN"
-- "LIMIT"
-- "COALESCE()"
-- Aggregate Functions
-- Date Filtering
-- Sorting
-- Filtering
-- Customer Analysis
-- Revenue Analysis
-- Inventory Analysis
-- Top-N Analysis
+SELECT
+WHERE
+DISTINCT
+COUNT()
+SUM()
+AVG()
+GROUP BY
+ORDER BY
+HAVING
+JOIN
+LEFT JOIN
+LIMIT
+COALESCE()
+Aggregate Functions
+Date Filtering
+Sorting
+Filtering
+Customer Analysis
+Revenue Analysis
+Inventory Analysis
+Top-N Analysis
 
 ---
 
 💡 Key Business Insights
 
-The SQL analysis helps identify:
-
-- 📚 Books available across different genres.
-- 💰 Total revenue generated through book orders.
-- 🏆 The most expensive book.
-- 📉 Books with low inventory levels.
-- 📊 Genre-wise book sales.
-- 👥 Customers with repeated orders.
-- 🏆 The most frequently ordered book.
-- ✍️ Author-wise quantity of books sold.
-- 🌎 Cities associated with higher customer spending.
-- 📦 Remaining inventory after accounting for orders.
+- 📚 Analyze book inventory across different genres.
+- 💰 Measure total revenue generated from orders.
+- 🏆 Identify the most frequently ordered books.
+- 📉 Detect books with low stock levels.
+- 📊 Compare sales performance across genres.
+- 👥 Identify customers with repeated purchases.
+- ✍️ Analyze author-wise book sales.
+- 🌎 Understand customer spending across cities.
+- 📦 Calculate remaining inventory after orders.
 
 ---
 
@@ -304,24 +260,22 @@ The SQL analysis helps identify:
 
 Based on the SQL analysis:
 
-- 📦 Monitor books with low stock to avoid inventory shortages.
-- 🏆 Maintain sufficient stock for frequently ordered books.
-- 📚 Analyze genre-wise sales to support inventory planning.
-- 👥 Monitor customers with multiple orders for customer-retention analysis.
-- ✍️ Analyze author-wise sales to understand customer demand.
-- 💰 Monitor high-spending customers and their purchasing activity.
-- 📊 Track total revenue and order values regularly.
-- 🔄 Compare available stock with ordered quantities to manage inventory effectively.
+- 📦 Monitor books with low remaining stock.
+- 🏆 Maintain sufficient inventory for frequently ordered books.
+- 📚 Analyze genre-wise sales for inventory planning.
+- 👥 Monitor repeat customers for customer-retention analysis.
+- ✍️ Analyze author-wise sales to understand demand.
+- 💰 Monitor high-spending customers.
+- 📊 Track revenue and order performance regularly.
+- 🔄 Compare stock levels with ordered quantities.
 
 ---
 
 📷 Project Documentation
 
-The complete project documentation contains the 20 business questions and their SQL queries, along with the database analysis.
+The complete project documentation contains the 20 business questions and SQL queries used in this project.
 
-Project Documentation: "Online_Book_Store.pdf"
-
-The PDF includes the project introduction, database structure, basic questions, advanced questions, SQL queries, and a final Thank You page.
+📄 Documentation: "Online_Book_Store.pdf"
 
 ---
 
@@ -346,30 +300,32 @@ Online-Book-Store-SQL/
 
 🚀 Project Highlights
 
-📚 20 Practical SQL Questions
-
-🟢 11 Basic SQL Questions
-
-🔵 9 Advanced SQL Questions
-
-🐘 PostgreSQL Database
-
-📊 Sales & Revenue Analysis
-
-👥 Customer Analysis
-
-📦 Inventory Analysis
-
-💡 Business-Oriented SQL Project
+Feature| Details
+📚 Business Questions| 20
+🟢 Basic Questions| 11
+🔵 Advanced Questions| 9
+🐘 Database| PostgreSQL
+📊 Analysis| Sales & Revenue
+👥 Customer Analysis| Yes
+📦 Inventory Analysis| Yes
+💡 Business Insights| Yes
 
 ---
 
 🎯 Project Objective
 
-The main objective of this project is to demonstrate how PostgreSQL and SQL can be used to analyze an online bookstore database and transform raw book, customer, and order data into meaningful business insights.
+The main objective of this project is to demonstrate how PostgreSQL and SQL can be used to transform raw book, customer, and order data into meaningful business insights.
+
+---
+
+⭐ Project Skills Demonstrated
+
+"PostgreSQL" "SQL" "Data Analysis" "JOINs" "Aggregation" "Filtering" "Grouping" "Sorting" "Customer Analysis" "Revenue Analysis" "Inventory Analysis"
 
 ---
 
 🙌 Thank You
 
-⭐ If you find this project useful, feel free to explore the repository and SQL analysis.
+⭐ Thanks for visiting this project!
+
+Feel free to explore the SQL queries, dataset, and project documentation.
